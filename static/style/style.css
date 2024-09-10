@@ -1,0 +1,60 @@
+@import url(./fonts.css);
+
+*{
+  scroll-behavior: smooth;
+}
+body{
+  background-color: white;
+}
+.section-title {
+  font-family: 'mulish';
+  color: #000000;
+  position: relative;
+  font-weight: 700 ;
+  display: block;
+  width: fit-content;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+}
+.section-title::after{
+  content: ' ';
+  background-color: #232D3780;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  transition: all .3s ease-in-out;
+}
+
+
+
+.feedbackSwiper .swiper-slide-fully-visible .bg-swiper {
+  opacity: 0;
+  transition: all .3s ease-in-out;
+}
+
+
+@media screen and (min-width: 768px) {
+  .section-title {
+    font-size: 34px;
+    line-height: 42px;
+  }
+  .feedbackSwiper .swiper-slide-prev .image-swiper {
+    position: absolute;
+    right: 0 ;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 32%;
+  }
+  
+}
+@media screen and (min-width: 1024px) {
+  .section-title {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}

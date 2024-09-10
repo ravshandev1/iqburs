@@ -1,0 +1,30 @@
+{% load static %}
+<footer class="relative bg-[#232D37E6] py-[15px] text-white ">
+        <div class="container flex max-md:flex-col justify-between items-center gap-y-4">
+            <div class=" flex items-center gap-2  md:gap-5">
+                <a href="https://wwww.instagram.com" target="_blank" class="w-6 h-6 hover:scale-110 duration-200 block"><img
+                        src="{% static 'image/telegram.svg' %}" class="w-full h-full" alt="Socials Icon"></a>
+                <a href="https://wwww.facebook.com" target="_blank" class="w-6 h-6 hover:scale-110 duration-200 block"><img
+                        src="{% static 'image/facebook.svg' %}" class="w-full h-full" alt="Socials Icon"></a>
+                <a href="https://wwww.telegram.org" target="_blank" class="w-6 h-6 hover:scale-110 duration-200 block"><img
+                        src="{% static 'image/instagram.svg' %}" class="w-full h-full" alt="Socials Icon"></a>
+            </div>
+            <div class="flex flex-col items-center gap-2">
+                <p class="font-medium font-mulish text-sm  ">© <span class="year"></span>. Все права защищены.</p>
+            </div>
+            <div class="flex flex-col gap-5 xl:gap-8 items-end">
+                <div class="flex items-center gap-[10px] text-white">
+                    <p class=" font-inter text-xs md:text-sm">Сайт создан :</p>
+                    <a href="https://abduganiev.uz/" target="_blank"
+                       class="flex group items-center gap-2 relative w-[80px] md:w-[100px] h-[50px] overflow-hidden">
+                        <img src="{% static 'image/logo.png' %}" alt="Abduganiev Logo"
+                             class="w-8 max-md:hidden h-8 object-cover duration-200 group-hover:scale-50 group-hover:opacity-0 group-hover:-translate-x-10      ">
+                        <img src="{% static 'image/abduganiev.png' %}" alt="Abduganiev Logo"
+                             class="shrink-0  duration-300  md:opacity-0 md:translate-x-10 group-hover:translate-x-0 group-hover:opacity-100 md:absolute left-0 object-contain w-full h-full">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <img class="w-full h-full object-cover absolute top-0 left-0 z-[-1]" src="{% static 'image/footerimage.jpg' %}"
+             alt="Footer bg">
+    </footer>

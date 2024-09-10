@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+    <title>IQDent - О нас</title>
+    <meta name="title" content="IQDent - О нас"/>
+    <meta name="description" content="Алмазные боры - классификация и употребление"/>
+    <meta property="og:title" content="IQDent - О нас"/>
+    <meta property="og:description" content="Алмазные боры - классификация и употребление"/>
+    <meta property="twitter:title" content="IQDent - О нас"/>
+    <meta property="twitter:description" content="Алмазные боры - классификация и употребление"/>
+{% endblock %}
+{% block content %}
+    <div class="wrapper overflow-hidden">
+        <nav id="nav" class="bg-darkBlue py-2.5 w-full fixed top-0 left-0 z-50 ">
+            <div class="container flex items-center justify-between">
+                <a href="/" class="w-[120px] h-8 block lg:w-[140px] lg:h-10">
+                    <img class="w-full h-full block object-contain logo-white" src="{% static 'image/logowhite.png' %}"
+                         alt="IQDENT Logo">
+                    <img class="w-full h-full block object-contain hidden logo-dark"
+                         src="{% static 'image/logodark.png' %}" alt="IQDENT Logo">
+                </a>
+                <ul class="flex items-center max-md:py-20 max-md:text-xl max-md:text-xl  lg:text-lg max-md:px-6 max-md:w-[300px]  gap-4 max-md:flex-col text-white nav-list font-inter max-md:fixed z-[9999] max-md:bg-darkBlue max-md:top-0 duration-300 max-md:-right-full max-md:h-screen">
+                    <li class="relative hover:before:w-1/2 before:w-0 before:h-[3px] before:rounded-s before:duration-200 before:bg-white before:absolute before:-bottom-2 md:before:-bottom-4 before:right-1/2   hover:after:w-1/2 after:w-0 after:h-[3px] after:rounded-e after:duration-200 after:bg-white after:absolute after:-bottom-2 md:after:-bottom-4 after:left-1/2  md:px-3  duration-300">
+                        <a href="{% url 'home' %}">Главная</a>
+                    </li>
+                    <li class="relative before:w-1/2 before:h-[3px] before:rounded-s before:duration-200 before:bg-white before:absolute before:-bottom-2 md:before:-bottom-4 before:right-1/2   after:w-1/2 after:h-[3px] after:rounded-e after:duration-200 after:bg-white after:absolute after:-bottom-2 md:after:-bottom-4 after:left-1/2  md:px-3  duration-300">
+                        <a href="{% url 'about' %}">О нас</a>
+                    </li>
+                    <li class="relative hover:before:w-1/2 before:w-0 before:h-[3px] before:rounded-s before:duration-200 before:bg-white before:absolute before:-bottom-2 md:before:-bottom-4 before:right-1/2   hover:after:w-1/2 after:w-0 after:h-[3px] after:rounded-e after:duration-200 after:bg-white after:absolute after:-bottom-2 md:after:-bottom-4 after:left-1/2  md:px-3  duration-300">
+                        <a href="{% url 'products' %}">Каталог</a>
+                    </li>
+                    <li class="relative hover:before:w-1/2 before:w-0 before:h-[3px] before:rounded-s before:duration-200 before:bg-white before:absolute before:-bottom-2 md:before:-bottom-4 before:right-1/2   hover:after:w-1/2 after:w-0 after:h-[3px] after:rounded-e after:duration-200 after:bg-white after:absolute after:-bottom-2 md:after:-bottom-4 after:left-1/2  md:px-3  duration-300">
+                        <a href="{% url 'certificates' %}">Сертификаты</a>
+                    </li>
+                    <li class=" duration-300 py-1 px-4 border w-fit border-white hover:bg-white hover:text-darkBlue">
+                        <a href="tel:+998900001234">Контакты</a>
+                    </li>
+                    <div class="absolute top-5 right-5 w-6 h-6 z-10 nav-close md:hidden ">
+                        <i data-lucide="x" class="w-full h-full"></i>
+                    </div>
+                </ul>
+                <div class="w-full h-screen absolute top-0 left-0 right-0 bg-darkBlue/50 z-[20] hidden nav-bg"></div>
+                <div class="w-6 h-6 md:hidden nav-menu">
+                    <svg viewBox="0 0 24 24" class="w-full h-full text-white " fill="currentColor"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4ZM7 12C7 11.4477 7.44772 11 8 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H8C7.44772 13 7 12.5523 7 12ZM13 18C13 17.4477 13.4477 17 14 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H14C13.4477 19 13 18.5523 13 18Z"/>
+                    </svg>
+                </div>
+            </div>
+        </nav>
+        <main class="mt-14  min-h-[90vh] ">
+            <section class="py-8 md:py-[50px]">
+                <div class="container">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-[50px]">
+                        <div class="w-full aspect-[5/4] md:h-full" data-aos="fade-left">
+                            <img src="{{ obj.image.url }}" alt="" class="object-cover w-full h-full">
+                        </div>
+                        <div class="flex flex-col gap-4  text-textColor items-center md:items-start md:py-4 justify-center"
+                             data-aos="fade-right">
+                            <div class="font-mulish font-semibold text-center md:text-start">
+                                <h2 class="section-title after:!hidden">О компании IQDENT</h2>
+                            </div>
+                            <p class="text-sm lg:text-base lg:leading-[25px] text-justify font-normal mt-1 leading-tight">{{ obj.text }}</p>
+                            <div>
+{#                                <button class="text-white font-normal text-sm md:text-base px-3 py-2 bg-darkBlue"#}
+{#                                        type="button">Свяжитесь с нами#}
+{#                                </button>#}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        {% include 'footer.html' %}
+    </div>
+{% endblock %}
+{% block js %}
+
+    <script>
+        lucide.createIcons();
+    </script>
+    <script>
+        AOS.init();
+    </script>
+{% endblock %}

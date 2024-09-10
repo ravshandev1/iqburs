@@ -1,0 +1,367 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+    <title>IQDent - Главный</title>
+    <meta name="title" content="IQDent - Главный"/>
+    <meta name="description" content="Алмазные боры - классификация и употребление"/>
+    <meta property="og:title" content="IQDent - Главный"/>
+    <meta property="og:description" content="Алмазные боры - классификация и употребление"/>
+    <meta property="twitter:title" content="IQDent - Главный"/>
+    <meta property="twitter:description" content="Алмазные боры - классификация и употребление"/>
+    <link rel="stylesheet" href="{% static 'plugins/swiper/swiper-bundle.min.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="wrapper overflow-x-hidden ">
+        <nav id="nav" class="bg-transparent duration-200   py-2.5 w-full fixed top-0 left-0  fixed top-0 left-0 z-50">
+            <div class="container flex items-center justify-between">
+                <a href="/" class="w-[120px] h-8 block lg:w-[140px] lg:h-10">
+                    <img class="w-full h-full block object-contain logo-white" src="{% static 'image/logowhite.png' %}"
+                         alt="IQDENT Logo">
+                    <img class="w-full h-full block object-contain hidden logo-dark"
+                         src="{% static 'image/logodark.png' %}"
+                         alt="IQDENT Logo">
+                </a>
+                <ul class="flex items-center nav_list max-md:py-20 max-md:text-xl  lg:text-lg max-md:px-6 max-md:w-[300px]  gap-4 max-md:flex-col text-white lg:text-darkBlue nav-list font-inter max-md:fixed z-[9999] max-md:bg-darkBlue max-md:top-0 duration-200 max-md:-right-full max-md:h-screen">
+                    <li class="relative before:w-1/2  before:h-[3px] before:rounded-s before:duration-200 before:bg-white before:absolute before:-bottom-2 md:before:-bottom-4 before:right-1/2   after:w-1/2  after:h-[3px] after:rounded-e after:duration-200 after:bg-white after:absolute after:-bottom-2 md:after:-bottom-4 after:left-1/2  md:px-3  duration-200">
+                        <a href="{% url 'home' %}">Главная</a>
+                    </li>
+                    <li class="relative hover:before:w-1/2 before:w-0 before:h-[3px] before:rounded-s before:duration-200 before:bg-white before:absolute before:-bottom-2 md:before:-bottom-4 before:right-1/2   hover:after:w-1/2 after:w-0 after:h-[3px] after:rounded-e after:duration-200 after:bg-white after:absolute after:-bottom-2 md:after:-bottom-4 after:left-1/2  md:px-3  duration-200">
+                        <a href="{% url 'about' %}">О нас</a>
+                    </li>
+                    <li class="relative hover:before:w-1/2 before:w-0 before:h-[3px] before:rounded-s before:duration-200 before:bg-white before:absolute before:-bottom-2 md:before:-bottom-4 before:right-1/2   hover:after:w-1/2 after:w-0 after:h-[3px] after:rounded-e after:duration-200 after:bg-white after:absolute after:-bottom-2 md:after:-bottom-4 after:left-1/2  md:px-3  duration-200">
+                        <a href="{% url 'products' %}">Каталог</a>
+                    </li>
+                    <li class="relative hover:before:w-1/2 before:w-0 before:h-[3px] before:rounded-s before:duration-200 before:bg-white before:absolute before:-bottom-2 md:before:-bottom-4 before:right-1/2   hover:after:w-1/2 after:w-0 after:h-[3px] after:rounded-e after:duration-200 after:bg-white after:absolute after:-bottom-2 md:after:-bottom-4 after:left-1/2  md:px-3  duration-200">
+                        <a href="{% url 'certificates' %}">Сертификаты</a>
+                    </li>
+                    <li class=" duration-200 py-1 px-4 border w-fit border-white  nav_contact lg:border-darkBlue">
+                        <a href="tel:+998900001234">Контакты</a>
+                    </li>
+                    <div class="absolute top-5 right-5 w-6 h-6 z-10 nav-close md:hidden  ">
+                        <i data-lucide="x" class="w-full h-full"></i>
+                    </div>
+                </ul>
+                <div class="w-full h-screen absolute top-0 left-0 right-0 bg-darkBlue/50 z-[20] hidden nav-bg"></div>
+                <div class="w-6 h-6 md:hidden nav-menu">
+                    <svg viewBox="0 0 24 24" class="w-full h-full text-white" fill="currentColor"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4ZM7 12C7 11.4477 7.44772 11 8 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H8C7.44772 13 7 12.5523 7 12ZM13 18C13 17.4477 13.4477 17 14 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H14C13.4477 19 13 18.5523 13 18Z"/>
+                    </svg>
+                </div>
+            </div>
+        </nav>
+        <header class=" relative  flex lg:items-center ">
+            <div class="grid w-full h-full absolute z-[1] top-0 left-0 grid-cols-1 z-50 lg:grid-cols-16">
+                <div class="bg-darkBlue col-span-1  lg:col-span-6 "></div>
+                <div class="bg-white col-span-1  lg:col-span-10 "></div>
+            </div>
+            <div class="lg:h-[85%] max-lg:w-full bg-darkBlue z-[3]  absolute max-lg:left-0 right-0 bottom-0 max-lg:px-3 max-lg:pb-3 lg:py-6 lg:pr-5">
+                <div class="border border-white/50 flex lg:flex-col px-7 justify-between items-center lg:h-full py-3 lg:py-6 lg:px-2 xl:px-4">
+                    <div class="max-lg:order-2 w-1/2 lg:w-[2px] bg-white/50 h-[2px] lg:h-[60%]"></div>
+                    <div class="max-lg:order-1 flex items-center gap-2 lg:flex-col md:gap-5">
+                        <a href="https://wwww.instagram.com" target="_blank"
+                           class="w-6 h-6 hover:scale-110 duration-200 block"><img
+                                src="{% static 'image/telegram.svg' %}" class="w-full h-full" alt="Socials Icon"></a>
+                        <a href="https://wwww.facebook.com" target="_blank"
+                           class="w-6 h-6 hover:scale-110 duration-200 block"><img
+                                src="{% static 'image/facebook.svg' %}" class="w-full h-full" alt="Socials Icon"></a>
+                        <a href="https://wwww.telegram.org" target="_blank"
+                           class="w-6 h-6 hover:scale-110 duration-200 block"><img
+                                src="{% static 'image/instagram.svg' %}" class="w-full h-full" alt="Socials Icon"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="container relative z-10  py-[20%] grid-cols-1 grid lg:grid-cols-2 xl:grid-cols-16 2xl:grid-cols-18 gap-y-12 md:py-[15%] md:gap-y-12 lg:grid-cols-9 lg:pt-[10%] lg:pb-[4%] xl:pt-[8%] ">
+                <div class="flex flex-col max-lg:items-center lg:justify-center col-span-1 lg:col-span-1 xl:col-span-5   lg:col-span-3"
+                     data-aos="fade-right">
+                    <h1 class="font-mulish text-white font-extrabold max-lg:text-center text-xl max-w-[370px] md:text-2xl xl:text-[30px] !leading-[1.4]">
+                        ПРОИЗВОДИТЕЛЬ СТОМАТОЛОГИЧЕСКИХ БОРОВ</h1>
+                    <p class="font-mulish text-white font-medium max-lg:text-center max-w-[340px] mt-4 xl:mt-7 lg:text-lg xl:text-xl">
+                        Алмазные боры - классификация и употребление</p>
+                    <a href="#input"
+                       class="bg-white text-darkBlue w-fit font-mulish py-1.5 px-4 mt-7 hover:text-white duration-200 border border-white hover:bg-transparent  block">Оставить
+                        заявку</a>
+                </div>
+                <div class=" relative w-full h-full lg:col-span-5 xl:col-span-10 2xl:col-span-13" data-aos="fade-left">
+                    <div class="w-full aspect-[2/2] lg:aspect-[18/11] max-lg:max-h-[500px] ">
+                        <div class="swiper headerSwiper !w-full !h-full p-2">
+                            <div class="swiper-wrapper">
+                                {% for carousel in carousels %}
+                                    <div class="swiper-slide !bg-transparent shadow-[0_4px_4px_0px_rgba(0,0,0,0.1)] !w-full aspect-square ">
+                                        <img class="w-full h-full object-cover" src="{{ carousel.image.url }}"
+                                             alt="Banner Image">
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <div class="absolute z-20 flex gap-5 bottom-5 right-5">
+                                <div class="swiper-button-prev after:!hidden !static"><img class="w-8 h-8"
+                                                                                           src="{% static 'image/left-swiper.svg' %}"
+                                                                                           alt="To Right"></div>
+                                <div class="swiper-button-next after:!hidden !static"><img class="w-8 h-8"
+                                                                                           src="{% static 'image/right-swiper.svg' %}"
+                                                                                           alt="To Right"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="pt-10 pb-20 xl:pt-[50px] xl:pb-[116px] relative z-20">
+            <div class="container">
+                <div class="flex md:items-center max-md:flex-col justify-between gap-y-3 mb-6 md:pb-3">
+                    <h2 class="section-title" data-aos="fade-up"> Популярные товари </h2>
+                    <a href="{% url 'products' %}" data-aos="fade-up"
+                       class="font-mulish font-medium flex lg:text-lg   items-center gap-4 group">
+                        <span>Смотреть все</span>
+                        <img class="w-10 h-2 object-contain group-hover:translate-x-3 duration-300 mt-0.5"
+                             src="{% static 'image/toCatalog.svg' %}" alt="Right Icon">
+                    </a>
+                </div>
+                <div class="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 xl:gap-8">
+                    {% for product in products %}
+                        <a href="{% url 'product' product.id %}"
+                           class="bg-[#FEFEFE] block border border-[#232D371A] flex flex-col items-center gap-y-2 md:gap-y-4 xl:gap-y-6 pt-6 pb-3 xl:pt-10 xl:pb-4 duration-300 hover:shadow-md"
+                           data-aos="fade-up">
+                            <img class="md:aspect-[5/14] aspect-[5/11] md:w-[100px] w-[70px]"
+                                 src="{{ product.image.url }}"
+                                 alt="Product Image ">
+                            {% if product.stock %}
+                                <div class="absolute top-0 right-0 py-1 px-3 bg-green-600 rounded-bl-lg text-sm font-medium text-white">
+                                    В наличии
+                                </div>
+                            {% else %}
+                                <div class="absolute top-0 right-0 py-1 px-3 bg-red-600 rounded-bl-lg text-sm font-medium text-white">
+                                    Нет в наличии
+                                </div>
+                            {% endif %}
+                            <p class="text-sm max-md:max-w-[140px] text-center md:text-base ">{{ product.name }}</p>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        <section class="relative pb-8 lg:pb-[50px] ">
+            <div class="container">
+                <h2 class="section-title mb-7 lg:mb-15 xl:mb-[63px]" data-aos="fade-up"> Преимущество </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-10 xl:gap-20 2xl:gap-32">
+                    <div class="w-full aspect-[6/4] md:aspect-[4/5] relative">
+                        <div class="bg-darkBlue w-[90%] h-[90%] absolute top-0 left-0 border border-[#232D371A]"></div>
+                        <div class="bg-white w-[90%] h-[90%] absolute bottom-0 right-0 border border-[#232D371A] p-4 lg:px-10 lg:py-8"
+                             data-aos="fade-right">
+                            <img class="w-full h-full " src="{% static 'image/burs.jpg' %}" alt="Adventes Image">
+                        </div>
+                    </div>
+                    <div class="lg:col-span-2 grid grid-cols-2 gap-4 row-span-1 lg:gap-7 xl:gap-14 relative z-10">
+                        {% for advantage in advantages %}
+                            <div data-aos="fade-up" data-aos-delay="50">
+                                <h3 class="font-mulish font-bold text-xl md:text-2xl lg:text-[26px] mb-2 ">{{ advantage.heading }}</h3>
+                                <span class="w-full h-[2px] bg-[#232D3780] block"></span>
+                                <p class="font-inter text-[#000000B3] mt-3 max-xl:text-sm">{{ advantage.text }}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <img class="absolute lg:top-[-5%] md:top-[-5%] -top-[7%] -right-20 w-[40%]  lg:w-[30%] xl:w-[20%] aspect-[55/19]"
+                 src="{% static 'image/borimage.png' %}" alt="Bor Image">
+        </section>
+        <section class="bg-darkBlue py-7 lg:py-12 " id="input">
+            <div class="container flex justify-center">
+                <div class="flex gap-4 md:gap-7 flex-col items-center max-w-[900px]">
+                    <p class="text-white font-inter text-center text-sm md:text-base lg:text-lg xl:text-xl"
+                       data-aos="fade-right">Остались вопросы? Мы с радостью Вам поможем!
+                        Оставьте заявку и наш менеджер свяжется с Вами в ближайшее время</p>
+                    <form method="post" action="/" class="w-full gap-5 grid-cols-1 grid md:grid-cols-3 ">
+                        {% csrf_token %}
+                        <input type="text" placeholder="Имя" name="name"
+                               class="bg-white text-darkBlue rounded-lg w-full !outline-0" data-aos="fade-up">
+                        <input type="text" placeholder="Телефон" name="phone"
+                               class="bg-white text-darkBlue rounded-lg w-full !outline-0" data-aos="fade-up">
+                        <button type="submit"
+                                class="bg-transparent !text-white border border-white rounded-lg form-submit  w-full ! text-center py-2"
+                                data-aos="fade-up">Отправить
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="py-10 md:py-[50px] relative">
+            <div class="flex absolute -right-10 top-0">
+                <img class="w-10 h-16 object-contain lg:w-[80px] lg:h-[120px]" data-aos="fade-left" data-aos-delay="50"
+                     src="{% static 'image/tooth.png' %}" alt="Tooth Image">
+                <img class="w-10 h-16 object-contain lg:w-[80px] lg:h-[120px]" data-aos="fade-left" data-aos-delay="100"
+                     src="{% static 'image/tooth.png' %}" alt="Tooth Image">
+                <img class="w-10 h-16 object-contain lg:w-[80px] lg:h-[120px]" data-aos="fade-left" data-aos-delay="150"
+                     src="{% static 'image/tooth.png' %}" alt="Tooth Image">
+                <img class="w-10 h-16 object-contain lg:w-[80px] lg:h-[120px]" data-aos="fade-left" data-aos-delay="200"
+                     src="{% static 'image/tooth.png' %}" alt="Tooth Image">
+            </div>
+            <div class="relative">
+                <div class="container ">
+                    <div class="md:pl-[5%]">
+                        <h2 class="section-title mt-3 mb-6 lg:mb-9 " data-aos="fade-up">Отзывы от клиентов</h2>
+                        <div class="w-full ">
+                            <div class="swiper feedbackSwiper" data-aos="fade-up">
+                                <div class="swiper-wrapper">
+                                    {% for feedback in feedbacks %}
+                                        <div class="swiper-slide bg-white grid grid-cols-1 md:grid-cols-3 shadow-md relative  my-3">
+                                            <div class="bg-[#232D37B3] w-full h-full absolute top-0 left-0 z-[10]  bg-swiper"></div>
+                                            <div class="flex pl-2.5 bg-darkBlue">
+                                                <div class="w-full aspect-[16/12] md:aspect-[27/44]  lg:aspect-[27/40] ">
+                                                    <img class="w-full h-full image-swiper object-cover object-center"
+                                                         src="{{ feedback.image.url }}" alt="Feedback User Image">
+                                                </div>
+                                            </div>
+                                            <div class="md:col-span-2 flex flex-col justify-center px-5  max-md:py-3 lg:px-8 xl:px-14 gap-y-3 lg:gap-y-6 xl:gap-y-8">
+                                                <img class="w-5 aspect-[4/3] md:w-8 lg:w-12 xl:w-16 2xl:w-20"
+                                                     src="{% static 'image/path.png' %}" alt="Image">
+                                                <p class="font-mulish text-xs !leading-[1.2] xs:text-sm md:text-base lg:text-lg">
+                                                    "{{ feedback.text }}"</p>
+                                                <div class="flex flex-col  ">
+                                                    <p class="font-mulish font-bold md:text-lg lg:text-xl">{{ feedback.name }}</p>
+                                                    <p class="text-sm md:text-base lg:text-lg">{{ feedback.profession }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-darkBlue max-md:hidden px-2 lg:px-5 h-full absolute top-0 left-0 flex gap-3 lg:gap-7 ">
+                    <div class="w-[1px] h-full">
+                        <div class="w-full h-[80%] bg-[#FFFFFF80]"></div>
+                    </div>
+                    <div class="w-[1px] h-full flex items-center">
+                        <div class="w-full h-[70%] bg-[#FFFFFF80]"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="successModal" class="w-full h-full fixed top-0 left-0 bg-darkBlue/40 succes-form z-20 hidden">
+            <div class="container flex flex-col items-center h-full justify-center">
+                <div class="p-4 lg:p-7 bg-darkBlue !w-full gap-2 text-white !max-w-[450px] succes-element flex flex-col items-center text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none"
+                         stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-circle-check-big">
+                        <path d="M21.801 10A10 10 0 1 1 17 3.335"/>
+                        <path d="m9 11 3 3L22 4"/>
+                    </svg>
+                    <h2 class="text-xl text-center font-medium  md:text-2xl lg:text-3xl">Ваш запрос принят</h2>
+                </div>
+            </div>
+        </div>
+        <div id="errorModal" class="w-full h-full fixed top-0 left-0 bg-darkBlue/40 succes-form z-20 hidden">
+            <div class="container flex flex-col items-center h-full justify-center">
+                <div class="p-4 lg:p-7 bg-white !w-full gap-2 text-[#f44336] !max-w-[450px] succes-element flex flex-col items-center text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none"
+                         stroke="#f44336" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-ban">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="m4.9 4.9 14.2 14.2"/>
+                    </svg>
+                    <h2 class="text-xl text-center font-medium  md:text-2xl lg:text-3xl">Ваш запрос не принят</h2>
+                </div>
+            </div>
+        </div>
+        {% include 'footer.html' %}
+    </div>
+{% endblock %}
+{% block js %}
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            {% for mes in messages %}
+                {% if mes.tags == 'success' %}
+                    const successModal = document.querySelector('#successModal')
+                    successModal.classList.remove('hidden')
+                    setTimeout(function () {
+                        successModal.classList.add('hidden')
+                    }, 1000);
+                {% elif mes.tags == 'error'%}
+                    const errorModal = document.querySelector('#errorModal')
+                    errorModal.classList.remove('hidden')
+                    setTimeout(function () {
+                        errorModal.classList.add('hidden')
+                    }, 1000);
+                {% endif %}
+            {% endfor %}
+        });
+        lucide.createIcons();
+    </script>
+    <script src="{% static 'plugins/swiper/swiper-bundle.min.js' %}"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        var swiper2 = new Swiper(".headerSwiper", {
+            grabCursor: true,
+            loop: true,
+            autoplay: {
+                delay: 6000,
+                disableOnInteraction: false,
+            },
+            effect: "creative",
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            creativeEffect: {
+                prev: {
+                    shadow: true,
+                    translate: ["-125%", 0, -500],
+                },
+                next: {
+                    shadow: true,
+                    translate: ["125%", 0, -500],
+                },
+            },
+        });
+    </script>
+    <script>
+        const nav = document.querySelector('#nav')
+        const navbarList = document.querySelector('.nav_list')
+        const navContact = document.querySelector('.nav_contact')
+
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                nav.classList.add('!bg-darkBlue')
+                navbarList.classList.add('!text-white')
+                navContact.classList.add('!border-white')
+            } else {
+                nav.classList.remove('!bg-darkBlue')
+                navbarList.classList.remove('!text-white')
+                navContact.classList.remove('!border-white')
+            }
+        })
+    </script>
+    <script>
+        var swiper2 = new Swiper(".feedbackSwiper", {
+            grabCursor: true,
+            centeredSlides: true,
+            autoplay: {
+                delay: 6000,
+                disableOnInteraction: false,
+            },
+            slidesPerView: 1.5,
+            loop: true,
+            effect: "creative",
+            creativeEffect: {
+                prev: {
+                    shadow: true,
+                    translate: ["-125%", 0, -500],
+                },
+                next: {
+                    shadow: true,
+                    translate: ["125%", 0, -500],
+                },
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+{% endblock %}

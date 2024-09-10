@@ -1,0 +1,37 @@
+/* mulish font */
+@font-face {
+  font-family: 'mulish';
+  src: url(../fonts/mulish/Mulish-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'mulish';
+  src: url(../fonts/mulish/Mulish-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'mulish';
+  src: url(../fonts/mulish/Mulish-SemiBold.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'mulish';
+  src: url(../fonts/mulish/Mulish-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'mulish';
+  src: url(../fonts/mulish/Mulish-ExtraBold.ttf);
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'mulish';
+  src: url(../fonts/mulish/Mulish-Black.ttf);
+  font-weight: 900;
+}
+/* inter font */
+@font-face {
+  font-family: 'inter';
+  src: url(../fonts/inter/Inter_18pt-Regular.ttf);
+  font-weight: 400;
+}
